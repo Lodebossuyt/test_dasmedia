@@ -8,8 +8,6 @@ use Livewire\WithPagination;
 
 class Company extends Component
 {
-    public $title;
-
     protected $company;
 
     use WithPagination;
@@ -21,9 +19,7 @@ class Company extends Component
 
     public function render()
     {
-        $vacatures = Vacature::where('company_id', $this->company->id)->when($this->title, function($query){
-            $query->orWhere('title', 'LIKE' , '%' . $this->title . '%');
-        })->paginate(125);
+        $vacatures = Vacature::paginate(125);
         return view('livewire.frontend.company',
             ['company'=>$this->company, 'vacatures'=>$vacatures])
             ->extends('components.frontend', ['header'=>$this->company->name]);

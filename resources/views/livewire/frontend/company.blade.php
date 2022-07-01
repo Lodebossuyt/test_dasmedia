@@ -8,19 +8,6 @@
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
             <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
                 <div class="p-6 bg-white border-b border-gray-200">
-                    <div class="inline-flex overflow-hidden mb-4 w-full bg-white rounded-lg shadow-md">
-                        <div class="px-4 py-2 -mx-3">
-                            <div class="mx-3">
-                                <form>
-                                    <label for="">
-                                        Search title:
-                                        <input wire:model="title" type="text">
-                                    </label>
-                                </form>
-                            </div>
-                        </div>
-                    </div>
-
                     <div class="overflow-hidden mb-8 w-full rounded-lg border shadow-xs">
                         <div class="overflow-x-auto w-full">
                             <table class="w-full whitespace-no-wrap">
