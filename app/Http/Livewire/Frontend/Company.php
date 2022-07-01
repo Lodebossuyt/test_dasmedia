@@ -19,7 +19,7 @@ class Company extends Component
 
     public function render()
     {
-        $vacatures = Vacature::paginate(125);
+        $vacatures = Vacature::where('company_id', $this->company->id)->paginate(125);
         return view('livewire.frontend.company',
             ['company'=>$this->company, 'vacatures'=>$vacatures])
             ->extends('components.frontend', ['header'=>$this->company->name]);
