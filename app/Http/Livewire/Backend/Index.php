@@ -32,12 +32,26 @@ class Index extends Component
     public $title;
 
     /**validatie**/
-    protected $rules = [
+    /*protected $rules = [
         'name'=>'required|min:6|unique:App\Models\Vacature,title',
         'company'=>'required',
         'apply'=>'required',
         'label'=>'required',
-    ];
+    ];*/
+
+    protected function rules()
+    {
+        return [
+            'name'=> [
+                'required',
+                'min:6',
+                'unique:App\Models\Vacature,title,' . $this->currentVacature->id,
+            ],
+            'company'=>'required',
+            'apply'=>'required',
+            'label'=>'required',
+        ];
+    }
 
     /**live validatie**/
     public function updatedName(){
