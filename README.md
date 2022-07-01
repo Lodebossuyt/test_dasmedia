@@ -20,8 +20,8 @@
 - Normaal hebben alle formulieren live validatie.
 
 - alle priemgetallen hebben het label: important
-- alle tienvouden met uizondering van honderdtallen hebben een apply spontaneously label gekregen.
+- alle tienvouden met uitzondering van de honderdtallen hebben een apply spontaneously label gekregen.
 - beiden zijn gelinkt aan het ID via de seeder, deze kan even duren!
 
-- Ik heb me gehouden aan 4uur en had anders nog toast messages, extra filters en meer herbruikbare componenten aangemaakt.
+- Ik heb me gehouden aan 5uur en had anders nog toast messages, extra filters en meer herbruikbare componenten aangemaakt.
  (Ik ken mezelf en blijf anders verder werken, het stopt nooit!!)
