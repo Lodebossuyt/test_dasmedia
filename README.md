@@ -23,4 +23,4 @@
 - alle tienvouden met uizondering van honderdtallen hebben een apply spontaneously label gekregen.
 - beiden zijn gelinkt aan het ID via de seeder, deze kan even duren!
 
-- Ik heb me gehouden aan 4uur en had anders nog toast messages, extra filters en meer herbruikbare componenten aangemaakt. 
+- Ik heb me gehouden (Ik ken mezelf en blijf anders verder werken, het stopt nooit!!) aan 4uur en had anders nog toast messages, extra filters en meer herbruikbare componenten aangemaakt. 
