@@ -58,7 +58,7 @@
                 @endforeach
                 </tbody>
             </table>
-            {{$vacatures->render()}}
+            {{$vacatures->withQueryString()->render()}}
         </div>
     </div>
 </div>

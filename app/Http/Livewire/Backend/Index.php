@@ -31,6 +31,11 @@ class Index extends Component
     /**filter**/
     public $title;
 
+    public function updatingTitle()
+    {
+        $this->resetPage('vacaturesPage');
+    }
+
     /**validatie**/
     /*protected $rules = [
         'name'=>'required|min:6|unique:App\Models\Vacature,title',
@@ -156,7 +161,9 @@ class Index extends Component
     public function render()
     {
         $companies = Company::all();
-        $vacatures = Vacature::when($this->title, function($query){
+        $vacatures = Vacature::query()
+            ->with('company')
+            ->when($this->title, function($query){
             $query->where('title', 'LIKE' , '%' . $this->title . '%');
         })->paginate(125, ['*'], 'vacaturesPage');
         return view('livewire.backend.index', compact('vacatures', 'companies'));

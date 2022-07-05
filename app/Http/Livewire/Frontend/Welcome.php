@@ -12,9 +12,15 @@ class Welcome extends Component
 
     public $title;
 
+    public function updatedTitle(){
+        $this->resetPage();
+    }
+
     public function render()
     {
-        $vacatures = Vacature::when($this->title, function($query){
+        $vacatures = Vacature::query()
+            ->with('company')
+            ->when($this->title, function($query){
             $query->where('title', 'LIKE' , '%' . $this->title . '%');
         })->paginate(125);
         return view('livewire.frontend.welcome', compact('vacatures'));

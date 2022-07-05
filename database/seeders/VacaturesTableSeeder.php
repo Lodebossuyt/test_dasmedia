@@ -21,7 +21,7 @@ class VacaturesTableSeeder extends Seeder
                 $vacature->label = 1;
                 $vacature->update();
             }
-            if($vacature->isTenFold()){
+            if($vacature->isVariableNumber(5,100)){
                 $vacature->apply = 1;
                 $vacature->update();
             }

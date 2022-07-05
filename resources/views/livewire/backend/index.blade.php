@@ -87,7 +87,7 @@
                 @endforeach
                 </tbody>
             </table>
-            {{$vacatures->render()}}
+            {{$vacatures->withQueryString()->links()}}
         </div>
 
         <x-small-modal wire:model="showVacatureDeleteModal">

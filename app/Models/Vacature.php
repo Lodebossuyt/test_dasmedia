@@ -26,16 +26,14 @@ class Vacature extends Model
 
         if ($n == 0){
             return true;
-        } else {
-            return false;
         }
+        return false;
     }
 
-    public function isTenFold(){
-        if(($this->id % 10 == 0) && ($this->id % 100 != 0)){
+    public function isVariableNumber($addOnNumber, $removeOnNumber){
+        if(($this->id % $addOnNumber == 0) && ($this->id % $removeOnNumber != 0)){
             return true;
-        }else{
-            return false;
         }
+        return false;
     }
 }
